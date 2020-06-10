@@ -1,0 +1,14 @@
+-- auto-generated definition
+create table urls
+(
+  id         int auto_increment
+    primary key,
+  url        text        null,
+  code       varchar(14) null,
+  ip         text        null,
+  visited    int         null,
+  created_at datetime    null
+);
+
+create index urls_code_index
+  on urls (code);

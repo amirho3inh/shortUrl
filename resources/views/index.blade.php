@@ -9,11 +9,12 @@
 
     <link rel="stylesheet" href="assets/css/index.css">
     <script src='assets/js/jquery-3.5.1.min.js'></script>
+    <script src='assets/js/particles.min.js'></script>
 </head>
 <body>
 <div class="splash">
     <div class="splash_logo">
-        TST
+        0xi
     </div>
     <div class="splash_svg">
         <svg width="100%" height="100%">
@@ -41,10 +42,14 @@
     </div>
 </div>
 
+<div id="particles-js" style="z-index: 2;position: absolute;width: 100vw;height: 100vh;"></div>
+
 <script>
-    var url = 'http://localhost/shortUrl/public/';
+    var baseUrl = 'http://localhost/shortUrl/public/';
+    var url = baseUrl+'api/';
     function small() {
         var domain = $('#url').val();
+        console.log(domain);
         if(domain==''){
             console.log('em');
             return false;
@@ -59,11 +64,21 @@
         $.ajax(settings).done(function (response) {
             if(!response.error){
                 if(response.message == 'INSERTED'){
-                    $('#message').html(url+response.data.code);
+                    $('#message').html(baseUrl+response.data.code);
                 }
             }
         });
     }
+    
+    $(function () {
+        $('#particles-js').hide();
+        setTimeout(function () {
+            particlesJS.load('particles-js', 'assets/js/particlesConfig.json', function() {
+                // console.log('callback - particles.js config loaded');
+            });
+            $('#particles-js').fadeIn(2000);
+        }, 3500)
+    })
 </script>
 
 </body>

@@ -19,6 +19,10 @@ $router->get('/', function () use ($router) {
     return view('index');
 });
 
+$router->get('/404', function () use ($router) {
+    return view('404');
+});
+
 $router->get('/{code}', function ($code) use ($router) {
     $results = app('db')->select("SELECT * FROM urls where code = '$code' LIMIT 1");
     if($results){
@@ -26,9 +30,12 @@ $router->get('/{code}', function ($code) use ($router) {
         $id = (int)$results[0]->id;
         $visited = app('db')->update("update urls set visited = '$newVisited' where id = $id");
         $data = ['url'=>$results[0]->url, 'visit'=>$results[0]->visited, 'date'=>$results[0]->created_at];
-        return response()->json(['error' => false, 'data' => $data, 'message' => '']);
+        return view('redirect', ['data' => $data]);
+        //return response()->json(['error' => false, 'data' => $data, 'message' => '']);
+
     }else{
-        return response()->json(['error' => true, 'data' => '', 'message' => 'DOMAIN_NOT_FOUND']);
+        return view('404');
+        //return response()->json(['error' => true, 'data' => '', 'message' => 'DOMAIN_NOT_FOUND']);
     }
 });
 

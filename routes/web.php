@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\DB;
 
 $router->get('/', function () use ($router) {
     //return $router->app->version();
-    return view('index');
+//    return view('index');
+    return view('index2');
 });
 
 $router->get('/404', function () use ($router) {

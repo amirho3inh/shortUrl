@@ -1,3 +1,11 @@
+@import url(../lib/IRANSans5/css/fontiran.css);
+
+body{
+  font-family: IRANSans;
+  direction: rtl;
+  text-align: right;
+}
+
 .container {
   margin: auto;
   width: 400px;
@@ -20,8 +28,17 @@
 }
 
 .label {
-  font: 90px "Open Sans";
+  font: 90px IRANSans;
   font-weight: 900;
   text-anchor: middle;
   fill: rgb(34, 213, 201);
+}
+
+.btn{
+  color: #fff!important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;border-radius: 8px;
+  text-decoration:unset;
 }

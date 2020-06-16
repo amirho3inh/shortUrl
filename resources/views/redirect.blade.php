@@ -22,7 +22,7 @@
 
 <div>
     <p style="text-align: center;">
-        <a href="javascript:end()">رد کردن</a>
+        <a class="btn" href="javascript:end()">رد کردن</a>
     </p>
 </div>
 

@@ -16,29 +16,47 @@
     <!--Content before waves-->
     <div class="inner-header flex">
         <!--Just the logo.. Don't mind this-->
-        {{--<svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"--}}
-             {{--xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">--}}
-{{--<path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283"/>--}}
-            {{--<g>--}}
-                {{--<path fill="#fff"--}}
-                      {{--d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4--}}
-{{--C499.8,112.4,388.1,0.8,250.4,0.8z M383.8,326.3c-62,0-101.4-14.1-117.6-46.3c-17.1-34.1-2.3-75.4,13.2-104.1--}}
-{{--c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7		c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2	c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z"/>--}}
-            {{--</g>--}}
-{{--</svg>--}}
-        {{--<h1>Simple CSS Waves</h1>--}}
+        <div class="boxInput">
+            <div>
+                {{--<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" style="width: 50%">--}}
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 464 464" style="enable-background:new 0 0 464 464;width: 30%" xml:space="preserve">
+<path style="fill:#FDBD40;" d="M251.72,144c-5.718-9.903-16.285-16.003-27.72-16H64c-17.673,0-32,14.327-32,32v64
+	c0,17.673,14.327,32,32,32h160c11.435,0.003,22.002-6.097,27.72-16h34.256c-7.332,28.237-32.803,47.964-61.976,48H64
+	c-35.33-0.04-63.96-28.67-64-64v-64c0.04-35.33,28.67-63.96,64-64h160c29.173,0.036,54.644,19.763,61.976,48H251.72z"/>
+                    <path style="fill:#5F79BA;" d="M212.28,320c5.718,9.903,16.285,16.003,27.72,16h160c17.673,0,32-14.327,32-32v-64
+	c0-17.673-14.327-32-32-32H240c-11.435-0.003-22.002,6.097-27.72,16h-34.256c7.332-28.237,32.803-47.964,61.976-48h160
+	c35.346,0,64,28.654,64,64v64c0,35.346-28.654,64-64,64H240c-29.173-0.036-54.644-19.763-61.976-48H212.28z"/>
+                    <g>
+                        <path style="fill:#FCF05A;" d="M64,232c-4.418,0-8-3.582-8-8v-64c0-4.418,3.582-8,8-8h64c4.418,0,8,3.582,8,8s-3.582,8-8,8H72v56
+		C72,228.418,68.418,232,64,232z"/>
+                        <path style="fill:#FCF05A;" d="M400,312h-64c-4.418,0-8-3.582-8-8s3.582-8,8-8h56v-56c0-4.418,3.582-8,8-8s8,3.582,8,8v64
+		C408,308.418,404.418,312,400,312z"/>
+                        <path style="fill:#FCF05A;" d="M328,88h16v16h-16V88z"/>
+                        <path style="fill:#FCF05A;" d="M328,120h16v16h-16V120z"/>
+                        <path style="fill:#FCF05A;" d="M312,104h16v16h-16V104z"/>
+                        <path style="fill:#FCF05A;" d="M344,104h16v16h-16V104z"/>
+                        <path style="fill:#FCF05A;" d="M104,328h16v16h-16V328z"/>
+                        <path style="fill:#FCF05A;" d="M104,360h16v16h-16V360z"/>
+                        <path style="fill:#FCF05A;" d="M88,344h16v16H88V344z"/>
+                        <path style="fill:#FCF05A;" d="M120,344h16v16h-16V344z"/>
+                    </g>
+                </svg>
 
-        <div>
-            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" style="width: 100%">
-        </div>
-        <div>
-            <input type="text" id="url" placeholder="آدرس لینک را وارد نمایید">
-        </div>
-        <div>
-            <a onclick="small()" class="sendBtn">کوتاه کن</a>
-        </div>
-        <div>
-            <div class="message" id="message"></div>
+            </div>
+            <div class="boxBtn">
+                <select id="protocol">
+                    <option value="http://">http</option>
+                    <option value="https://">https</option>
+                </select>
+                <input type="text" id="url" placeholder="آدرس لینک را وارد نمایید">
+            </div>
+            <div>
+                <a onclick="small()" class="sendBtn">کوتاه کن</a>
+            </div>
+            <div>
+                <div class="message" id="message"></div>
+            </div>
         </div>
     </div>
 
@@ -64,7 +82,7 @@
 
 <!--Content starts-->
 <div class="content flex">
-    <p>Daniel Österman | 2019 | Free to use</p>
+    <p>Daniel Österman | 2020 | URL Shortener</p>
 </div>
 <!--Content ends-->
 
@@ -73,7 +91,13 @@
     var baseUrl = 'http://localhost/shortUrl/public/';
     var url = baseUrl+'api/';
     function small() {
+        $('#message').html('');
+        $('#message').hide();
         var domain = $('#url').val();
+        var protocol = $('#protocol').val();
+        domain = domain.replace("http://", "");
+        domain = domain.replace("https://", "");
+        domain = protocol+domain;
         console.log(domain);
         if(domain==''){
             console.log('em');
@@ -89,6 +113,7 @@
         $.ajax(settings).done(function (response) {
             if(!response.error){
                 if(response.message == 'INSERTED'){
+                    $('#message').fadeIn();
                     $('#message').html(baseUrl+response.data.code);
                 }
             }
@@ -96,13 +121,7 @@
     }
 
     $(function () {
-        $('#particles-js').hide();
-        setTimeout(function () {
-            particlesJS.load('particles-js', 'assets/js/particlesConfig.json', function() {
-                // console.log('callback - particles.js config loaded');
-            });
-            $('#particles-js').fadeIn(2000);
-        }, 3500)
+
     })
 </script>
 </body>

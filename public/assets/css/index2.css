@@ -1,18 +1,7 @@
+@import url(../lib/IRANSans5/css/fontiran.css);
+
 body {
     margin:0;
-}
-
-h1 {
-    font-family: 'Lato', sans-serif;
-    font-weight:300;
-    letter-spacing: 2px;
-    font-size:48px;
-}
-p {
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 1px;
-    font-size:14px;
-    color: #333333;
 }
 
 .header {
@@ -57,6 +46,7 @@ p {
     height:20vh;
     text-align:center;
     background-color: white;
+    font-family: IRANSans;
 }
 
 /* Animation */
@@ -102,4 +92,62 @@ p {
     }
 }
 
+.boxInput{
+    /*background: rgba(255,255,255,.2);*/
+    width: 18vw;
+}
 
+.boxInput .boxBtn{
+    margin: 20px;
+}
+
+.boxInput .boxBtn input{
+    padding: 5px;
+    border-radius: 0px 8px 8px 0px;
+    border: 1px solid #ffffff;
+    font-family: IRANSans;
+    width: 70%;
+}
+
+.boxInput .boxBtn select{
+    padding: 5px;
+    border-radius: 8px 0px 0px 8px;
+    border: 0px;
+    margin-right: -4px;
+    font-family: IRANSans;
+}
+
+.boxInput .sendBtn{
+    background: rgba(255,255,255,.2);
+    padding: 8px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,26,79,0);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,26,79,0);
+    box-shadow: 0px 0px 0px 0px rgba(0,26,79,0);
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+    font-family: IRANSans;
+}
+
+.boxInput .sendBtn:hover{
+    background: rgba(255,255,255,.3);
+    -webkit-box-shadow: 0px 8px 17px -4px rgba(0,26,79,1);
+    -moz-box-shadow: 0px 8px 17px -4px rgba(0,26,79,1);
+    box-shadow: 0px 8px 17px -4px rgba(0,26,79,1);
+    padding: 8px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.message{
+    margin: 20px 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,.3);
+    border-radius: 8px;
+    display: none;
+}
